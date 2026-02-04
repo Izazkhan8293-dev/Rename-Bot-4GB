@@ -3,9 +3,6 @@ from config import *
 import pyromod
 import pyrogram.utils
 import asyncio
-
-asyncio.set_event_loop(asyncio.new_event_loop())
-
 from pyrogram import Client, idle
 
 pyrogram.utils.MIN_CHAT_ID =-1001685382274
@@ -26,16 +23,6 @@ async def main():
     await idle()
     await app.stop()
 
-if STRING_SESSION:
-    apps = [Client2,bot]
-    for app in apps:
-        app.start()
-    idle()
-    for app in apps:
-        app.stop()
-    
-else:
-    bot.run()
 
 
 if __name__ == "__main__":
